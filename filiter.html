@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Even Numbers</title>
+</head>
+<body>
+
+<h2>Even Numbers from Array</h2>
+<p id="output"></p>
+
+<script>
+    // Original array
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    // Use filter to get even numbers
+    const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+    // Display result
+    document.getElementById('output').textContent = 
+        'Even Numbers: [' + evenNumbers.join(', ') + ']';
+</script>
+
+</body>
+</html>

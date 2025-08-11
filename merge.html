@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge Arrays Using Spread Operator</title>
+</head>
+<body>
+
+<h2>Merged Array</h2>
+<p id="output"></p>
+
+<script>
+    // Arrays to merge
+    const a = [1, 2];
+    const b = [3, 4];
+
+    // Merge using spread operator
+    const mergedArray = [...a, ...b];
+
+    // Display the result
+    document.getElementById('output').textContent = 'Merged Array: [' + mergedArray.join(', ') + ']';
+</script>
+
+</body>
+</html>

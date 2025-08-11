@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sum of Array - For Loop Version</title>
+</head>
+<body>
+  <h2>Sum of Numbers in Array (For Loop)</h2>
+
+  <label for="numbersInput">Enter numbers separated by commas:</label><br />
+  <input type="text" id="numbersInput" placeholder="e.g. 5, 10, 15" size="30" />
+  <button onclick="calculateSum()">Calculate Sum</button>
+
+  <p id="result"></p>
+
+  <script>
+    function sumArray(arr) {
+      let total = 0;
+      for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+      }
+      return total;
+    }
+
+    function calculateSum() {
+      const input = document.getElementById('numbersInput').value;
+      const rawValues = input.split(',');
+      const numbers = [];
+
+      for (let val of rawValues) {
+        const num = Number(val.trim());
+        if (isNaN(num)) {
+          document.getElementById('result').textContent = 'Please enter only valid numbers separated by commas.';
+          return;
+        }
+        numbers.push(num);
+      }
+
+      const sum = sumArray(numbers);
+      document.getElementById('result').textContent = `Sum: ${sum}`;
+    }
+  </script>
+</body>
+</html>

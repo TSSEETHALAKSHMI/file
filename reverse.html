@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse an Array</title>
+</head>
+<body>
+
+<h2>Reverse an Array</h2>
+<p id="original"></p>
+<p id="reversed"></p>
+
+<script>
+    // Function to reverse an array without changing the original
+    function reverseArray(arr) {
+        return arr.slice().reverse(); // slice() creates a copy
+    }
+
+    // Original array
+    const originalArray = [1, 2, 3];
+
+    // Reversed array
+    const reversedArray = reverseArray(originalArray);
+
+    // Show results in HTML
+    document.getElementById('original').textContent = 'Original Array: [' + originalArray.join(', ') + ']';
+    document.getElementById('reversed').textContent = 'Reversed Array: [' + reversedArray.join(', ') + ']';
+</script>
+
+</body>
+</html>
